@@ -1,0 +1,23 @@
+{
+  "name": "smart-shopping-server",
+  "version": "1.0.0",
+  "description": "智能购物系统后端：商品数据接口与规则引擎模拟 AI 导购",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecommerce",
+    "express",
+    "vue3",
+    "ai-shopping"
+  ],
+  "author": "林昱宏",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}

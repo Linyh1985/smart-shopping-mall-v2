@@ -1,0 +1,38 @@
+/* ======================================================================
+ * 全局样式 reset —— 只做浏览器默认样式的清零，不写业务样式
+ * ----------------------------------------------------------------------
+ * 原来这个文件是 Vite 初始化时自带的 Logo 展示页样式（有 width: 1126px、
+ * text-align: center、font: 18px 等规则），会污染购物系统的 H5 移动端布局。
+ * 现在把它清空，只保留最基础的样式重置。
+ * ====================================================================== */
+
+/* 全局 box-sizing：让 border 和 padding 包含在元素宽高内
+   这是最常用的 CSS reset，可以避免很多布局计算问题 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* 移动端适配：让 rem 单位基于 375px 计算（如果以后用 rem 的话）
+     目前项目用的是 px，所以这行不影响什么，保留也没问题 */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;       /* 浏览器默认 body 有 8px 外边距，去掉它让页面铺满 */
+  padding: 0;      /* 同样去掉默认 padding */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif; /* 移动端友好的系统字体 */
+  color: #323233;  /* 默认文字颜色：深灰色（参考 Vant 的基础色） */
+  background: #f7f8fa; /* 默认页面背景：浅灰色（和 Home.vue 的背景一致） */
+}
+
+/* 去除常用元素的默认样式 */
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; }
