@@ -107,4 +107,4 @@ npm run dev
 
 ## 📄 License
 
-MIT © 林昱宏
+MIT © Linyh1985
